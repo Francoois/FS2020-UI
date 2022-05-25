@@ -1,17 +1,18 @@
-#image-background {
+#image-background::before {
     height: 100vh;
     background-image: url('../assets/Earth_from_Space.jpg') ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 115%;
-
-}
-#black-blur{
     /* https://dev.to/nazanin_ashrafi/remove-white-border-from-blurry-background-image-3d8j */
-    margin: 0;
-    height:100%;
-    backdrop-filter: blur(10px) grayscale(40%);
-    /*backdrop-filter: url(commonfilters.svg#filter);*/
+    position: fixed;
+    content:"";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(10px) grayscale(40%);
+    /*margin: -20px;*/
 }
 
 html, body, #black-background {
