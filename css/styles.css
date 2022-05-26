@@ -28,12 +28,12 @@ body {
     background-color: black;
 }
 
-nav, footer, #flight-preparation{
+nav, footer, #flight-summary{
     background-color: rgba(50,50,50,0.5);
     border: solid #FFF1;
     border-width: .25em 0 .25em 0;
 }
-#flight-preparation{
+#flight-summary{
     border-width: 0 0 .25em 0;
 }
 
@@ -103,10 +103,6 @@ nav, footer, #flight-preparation{
     left: .5em;
 }
 
-* {
-    border:1px solid red;
-}
-
 #settings-zone{
     display: flex;
     justify-content: space-evenly;
@@ -115,15 +111,26 @@ nav, footer, #flight-preparation{
 }
 
 #settings-zone .circled{
-    height: 2em;
-    width: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .circled i{
+    height: 1.5em;
+    width: 1.5em;
+
     color: rgb(32,32,32);
     background: white;
-    padding: .5em;
     border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circled.greyed i{
+    color: rgb(45,45,45);
+    background: rgb(85,85,85);
 }
 
 #name{
@@ -137,11 +144,68 @@ nav, footer, #flight-preparation{
     font-size: .75em;
 }
 
-#community.greyed i{
-    color: rgb(45,45,45);
-    background: rgb(85,85,85);
+/* Flight summary */
+
+* {
+    border:1px solid red;
 }
 
-#flight-preparation {
+#flight-summary {
     height: 12%;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    gap: 0.5%;
+}
+
+#selected-aircraft, #flight-condition{
+    width: 18%;
+}
+
+#selected-aircraft{
+    background-color: white;
+    color: black;
+    font-size: .7em;
+}
+#selected-aircraft em{
+    font-weight: bold;
+}
+
+#from-to{
+    width: 58%;
+}
+#from-to > div:nth-of-type(1){
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#departure-n-arrival{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+}
+
+.ad-dropdown{
+    border-color: rgb(80,180,250);
+    /*background-image: rgb(80,180,250);*/
+}
+.ad-dropdown,.rwy{
+    color: white;
+    background-color: rgb(53,57,62);
+    width: 100%;
+}
+.rwy{
+    padding: 0;
+}
+
+#exchange {
+    /*padding: 0 1em 0 1em;*/
+    background: rgb(80,180,250);
+    border-radius: 50%;
+    height: 1.5em;
+    width: 1.5em;
 }

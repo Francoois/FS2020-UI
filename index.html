@@ -53,7 +53,7 @@
         </ul>
     </nav>
 
-    <div id="flight-preparation">
+    <div id="flight-summary">
         <div id="selected-aircraft">
             <em>Textron Aviation</em>
             <span>Beechcraft Bonanza G36</span>
@@ -61,7 +61,7 @@
         </div>
         <div id="from-to">
             <div><span>FROM</span><span>TO</span></div>
-            <div>
+            <div id="departure-n-arrival">
                 <div>
                     <select name="departure" class="ad-dropdown">
                         <option value="">SELECT DEPARTURE AIRPORT</option>
@@ -70,7 +70,7 @@
                     </select>
                     <input type="text" class="rwy">
                 </div>
-                <span id="exchange"></span>
+                <div id="exchange"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
                 <div>
                     <select name="arrival" class="ad-dropdown">
                         <option value="">SELECT ARRIVAL AIRPORT</option>
@@ -82,7 +82,9 @@
 
             </div>
         </div>
-        <div id="flight-condition"></div>
+        <div id="flight-condition">
+            <em>FLIGHT CONDITIONS</em>
+        </div>
     </div>
 
     <div id="display-zone">
@@ -141,8 +143,6 @@
     <footer></footer>
 
 </div>
-
-<i class="fa-solid fa-arrow-right-arrow-left"></i>
 
 <script src="js/scripts.js">
     'use strict';
