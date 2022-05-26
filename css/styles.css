@@ -150,7 +150,8 @@ nav, footer, #flight-summary{
     height: 12%;
     display: flex;
     align-items: stretch;
-    align-content: center;
+    align-content: stretch;
+    justify-content: center;
     gap: 0.5%;
 }
 
