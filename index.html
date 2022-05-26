@@ -24,95 +24,122 @@
 </head>
 <body>
 <!-- Calendrier : https://www.ofqj.org/nos-ateliers-dinformation/# -->
-<div id="black-background">
-    <div id="image-background">
-        <div id="black-blur">
+<div id="image-background">
+    <nav class="menu">
+        <a id="home-btn">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <ul id="task-bar">
+            <li id="context-zone" class="selected">
+                <a>WORLD MAP</a>
+            </li>
+        </ul>
+        <ul id="settings-zone">
+            <li id="community" class="greyed">
+                <i class="fa-solid fa-user-group"></i>
+            </li>
+            <li id="me" class="circled">
+                <i class="fa-solid fa-user"></i>
+            </li>
+            <li id="notification" class="circled">
+                <i class="fa-solid fa-bell"></i>
+            </li>
+            <li id="name">
+                JEFF RAMOS
+            </li>
+            <li id="user-image">
+                <img src="assets/Flag_of_New_Brunswick.png" alt="User team picture">
+            </li>
+        </ul>
+    </nav>
 
-            <nav class="menu">
-                <a id="home-btn">
-                    <i class="fa-solid fa-house"></i>
-                </a>
-                <ul id="task-bar">
-                    <li id="context-zone" class="selected">
-                        <a>WORLD MAP</a>
-                    </li>
-                </ul>
-                <ul id="settings-zone">
-                    <li id="community" class="greyed">
-                        <i class="fa-solid fa-user-group"></i>
-                    </li>
-                    <li id="me" class="circled">
-                        <i class="fa-solid fa-user"></i>
-                    </li>
-                    <li id="notification" class="circled">
-                        <i class="fa-solid fa-bell"></i>
-                    </li>
-                    <li id="name">
-                        JEFF RAMOS
-                    </li>
-                    <li id="user-image">
-                        <img src="assets/Flag_of_New_Brunswick.png" alt="User team picture">
-                    </li>
-                </ul>
-            </nav>
-
-            <div id="flight-preparation">
-                <div id="selected-aircraft"></div>
-                <div id="from-to"></div>
-                <div id="flight-condition"></div>
-            </div>
-
-            <div id="display-zone">
-                <div id="categories">
-
+    <div id="flight-preparation">
+        <div id="selected-aircraft">
+            <em>Textron Aviation</em>
+            <span>Beechcraft Bonanza G36</span>
+            <img src="">
+        </div>
+        <div id="from-to">
+            <div><span>FROM</span><span>TO</span></div>
+            <div>
+                <div>
+                    <select name="departure" class="ad-dropdown">
+                        <option value="">SELECT DEPARTURE AIRPORT</option>
+                        <option value="">LFPX</option>
+                        <option value="">LFON</option>
+                    </select>
+                    <input type="text" class="rwy">
                 </div>
-                <div id="aircraft-selection">
-                    <div id="search"></div>
-                    <div id="result-filter"></div>
-                    <div id="result-list">
-                        <div class="search-result">
-                            <img class="result-img" src="">
-                            <div class="result-idcard">
-                                <ul>
-                                    <li>
-                                        <em>Airbus</em>
-                                        <p>A320neo</p>
-                                    </li>
-                                    <li>
-                                        <span class="speed"></span>
-                                        <em>Cruise Speed</em>
-                                        <p>455 KTAS</p>
-                                        <span class="up"></span>
-                                    </li>
-                                    <li>
-                                        <span class="max-alt"></span>
-                                        <em>Max Altitude</em>
-                                        <p>39,800 Ft</p>
-                                        <span class="up"></span>
-                                    </li>
-                                    <li>
-                                        <span class="endurance"></span>
-                                        <em>Endurance</em>
-                                        <p>7 Hr</p>
-                                        <span class="up"></span>
-                                    </li>
-                                    <li>
-                                        <span class="range"></span>
-                                        <em>Range</em>
-                                        <p>3,500 NM</p>
-                                        <span class="up"></span>
-                                    </li>
+                <span id="exchange"></span>
+                <div>
+                    <select name="arrival" class="ad-dropdown">
+                        <option value="">SELECT ARRIVAL AIRPORT</option>
+                        <option value="">LFPX</option>
+                        <option value="">LFON</option>
+                    </select>
+                    <input type="text" class="rwy">
+                </div>
 
-                                </ul>
-                            </div>
-                        </div>
+            </div>
+        </div>
+        <div id="flight-condition"></div>
+    </div>
+
+    <div id="display-zone">
+        <div id="categories">
+            <ul>
+                <li>AIRCRAFT SELECTION</li>
+                <li>LIVERIES</li>
+                <li>WEIGHT & BALANCE</li>
+                <li>FAILURES</li>
+                <li>ATC OPTIONS</li>
+            </ul>
+        </div>
+        <div id="aircraft-selection">
+            <div id="search"></div>
+            <div id="result-filter"></div>
+            <div id="result-list">
+                <div class="search-result">
+                    <img class="result-img" src="">
+                    <div class="result-idcard">
+                        <ul>
+                            <li>
+                                <em>Airbus</em>
+                                <p>A320neo</p>
+                            </li>
+                            <li>
+                                <span class="speed"></span>
+                                <em>Cruise Speed</em>
+                                <p>455 KTAS</p>
+                                <span class="up"></span>
+                            </li>
+                            <li>
+                                <span class="max-alt"></span>
+                                <em>Max Altitude</em>
+                                <p>39,800 Ft</p>
+                                <span class="up"></span>
+                            </li>
+                            <li>
+                                <span class="endurance"></span>
+                                <em>Endurance</em>
+                                <p>7 Hr</p>
+                                <span class="up"></span>
+                            </li>
+                            <li>
+                                <span class="range"></span>
+                                <em>Range</em>
+                                <p>3,500 NM</p>
+                                <span class="up"></span>
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
             </div>
-            <footer></footer>
         </div>
-
     </div>
+    <footer></footer>
+
 </div>
 
 <i class="fa-solid fa-arrow-right-arrow-left"></i>

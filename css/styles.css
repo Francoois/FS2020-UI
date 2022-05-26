@@ -13,9 +13,10 @@
     bottom: 0;
     filter: blur(10px) grayscale(40%);
     /*margin: -20px;*/
+    z-index: -1;
 }
 
-html, body, #black-background {
+html, body {
     margin: 0;
     padding: 0;
     height:100%;
@@ -23,28 +24,29 @@ html, body, #black-background {
     font-family: "Roboto Light", sans-serif;
     color: white;
 }
-
-#black-background{
+body {
     background-color: black;
 }
 
-nav footer #flight-preparation{
-    background-color: rgba(50,50,50,0.1);
-
-    border: solid rgba(50,50,50,.1);
+nav, footer, #flight-preparation{
+    background-color: rgba(50,50,50,0.5);
+    border: solid #FFF1;
     border-width: .25em 0 .25em 0;
+}
+#flight-preparation{
+    border-width: 0 0 .25em 0;
 }
 
 .menu {
     margin: 0;
+    padding: 0 2% 0 2%;
     display: flex;
     /*flex-direction: row;
     flex-wrap: nowrap;*/
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: stretch;
 
-    padding: 0;
     height: 8.3%;
 }
 
@@ -56,14 +58,23 @@ nav footer #flight-preparation{
     margin: 0;
 }
 
+#home-btn{
+    font-size: .8em;
+    padding: .5em;
+    text-decoration: underline;
+}
+#home-btn::after{
+    width: 90%;
+
+    background: rgb(80,180,250);
+    height: 0.5em;
+    border: 0;
+
+}
+
 #user-image img{
     height: 2em;
     clip-path: circle();
-}
-
-#home-btn {
-    margin-left: 2em;
-    color: white;
 }
 
 #task-bar{
@@ -110,4 +121,8 @@ nav footer #flight-preparation{
     background: white;
     padding: .5em;
     border-radius: 50%;
+}
+
+#flight-preparation {
+    height: 12%;
 }
