@@ -146,10 +146,6 @@ nav, footer, #flight-summary{
 
 /* Flight summary */
 
-* {
-    border:1px solid red;
-}
-
 #flight-summary {
     height: 12%;
     display: flex;
@@ -166,9 +162,16 @@ nav, footer, #flight-summary{
     background-color: white;
     color: black;
     font-size: .7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #selected-aircraft em{
     font-weight: bold;
+}
+#selected-aircraft img{
+    width: 95%;
+    height: auto;
 }
 
 #from-to{
@@ -237,3 +240,15 @@ nav, footer, #flight-summary{
     height: 1.5em;
     width: 1.5em;
 }
+
+#flight-condition em{
+    background-color:rgb(80,180,250);
+    width: 100%;
+}
+#flight-condition{
+    background-color: rgb(10,30,45);
+}
+
+/** {*/
+/*    border:1px solid red;*/
+/*}*/
