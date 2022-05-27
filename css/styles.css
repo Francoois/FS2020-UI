@@ -253,6 +253,11 @@ nav, footer, #flight-summary{
 #flight-condition em{
     background-color:rgb(80,180,250);
     width: 100%;
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    font-size: .8em;
+    padding: .4em;
 }
 #flight-condition{
     background-color: rgb(10,30,45);
@@ -272,7 +277,8 @@ nav, footer, #flight-summary{
     justify-content: center;
     gap: 0.5em;
     width: 96%;
-    background-color: rgb(59,59,59,.5);
+    /*background-color: rgb(59,59,59,.5);*/
+    background-color: #FFF4;
     border: solid white;
     border-width: 7px 4px 4px 4px;
 }
@@ -296,8 +302,11 @@ nav, footer, #flight-summary{
     font-weight: bold;
 }
 
-#categories, #search, #result-filter, #result-list{
-    background-color: rgb(46,46,46,.5);
+#categories,
+#search,
+#result-filter,
+#result-list{
+    background-color: rgb(46,46,46,.7);
 }
 
 #aircraft-selection{
@@ -418,9 +427,34 @@ p{
     flex-flow: row nowrap;
     align-items: stretch;
     justify-content: flex-start;
+    gap: .5em;
+    padding: .5em;
 }
 
+.search-result{
+    background-color: rgb(83,83,83,.5);
+    border: 5px solid #FFF3;
+}
+.search-result img{
+    width: 17vw;
+}
 
+.result-idcard ul li:nth-of-type(1){
+    background-color: rgb(50,50,50,.3);
+}
+.result-idcard ul li{
+    font-style: normal;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: .5em;
+}
+.result-idcard ul li em{
+    font-style: normal;
+}
+.result-idcard ul li p{
+
+}
 
 footer{
     position: fixed;
